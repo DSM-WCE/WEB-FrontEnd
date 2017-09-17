@@ -1,7 +1,6 @@
-# WEB-FrontEnd
+# WEB-FrontEnd Repository
 
 
-<h1>WCE's Frontend Repository</h1>
 
 <h2>주제</h2>
 
