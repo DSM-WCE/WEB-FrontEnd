@@ -6,35 +6,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="boxShadow">
+        <button class="headerBtn">유저설정</button>
+        <button class="headerBtn">로그아웃</button>
+    </header>
     <main>
-        <header></header>
-        <nav>
-            <div class="userProfile">
-                <div class="triangle-topleft"></div>
-                <div class="userProfileImg"></div>
-                <div class="userProfileIntro">
-                    한 줄 소개 입니다
-                </div>
+       <div class="container">
+            <div class="userCont boxShadow">
+                <div class="userProfile"></div>
+                <div class="userName">정윤재</div>
+                <div class="userIntro">행복한 연애생활 중</div>
             </div>
-            <a class="pageNav stClick" href="#">메인페이지</a>
-            <a class="pageNav" href="#">마이페이지</a>
-            <a class="userButton userSet" href="#">유저설정</a>
-            <a class="userButton" href="#">로그아웃</a>
-        </nav>
-        <article>
-            <div class="creation">
-                <div class="creationImg month"></div>
-                <a href="#" class="creationBtn"></a>
-            </div>
-            <div class="creation">
-                <div class="creationImg week"></div>
-                <a href="#" class="creationBtn"></a>
-            </div>
-            <div class="creation">
-                <div class="creationImg day"></div>
-                <a href="#" class="creationBtn"></a>
-            </div>
-        </article>
+            <ul class="creation boxShadow">
+                <li><a href="#" class="creationMonth"><span>월</span>별 계획 생성</a></li>
+                <li><a href="#" class="creationWeek"><span>주</span>별 계획 생성</a></li>
+                <li><a href="#" class="creationDay"><span>일</span>별 계획 생성</a></li>
+            </ul>
+        </div>
+        <div class="contents boxShadow"></div>
     </main>
 </body>
 </html>

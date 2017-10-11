@@ -1,147 +1,114 @@
+	
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', serif;
 }
-main {
-    background-image: url(../images/background.png);
-    width: 100%;
-    height: 100vh;
-    font-size: 0px;
+
+body {
+    background-color: #b9b9b9;
+}
+
+.boxShadow {
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 header {
-    background-color: #8C6689;
+    background-color: white;
     width: 100%;
-    height: 10%;
+    height: 40px;
+    text-align: right;
+    padding-right: 40px;
 }
 
-nav {
-    background-image: url(../images/pattern.png);
-    width: 250px;
-    height: 90%;
-    background-size: cover;
-    text-align: center;
+.headerBtn {
+    text-align: right;
+    margin: 6px 3px;
     display: inline-block;
 }
 
-.polygon {
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
+button {
+    padding: 5px 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
 }
 
+.container {
+    display: inline-block;
+    height: 100%;
+}
 
-.triangle-topleft {
-	width: 0;
-	height: 0;
-	border-top: 40px solid #8C6689;
-	border-right: 40px solid transparent;
+main {
+    width: 100%;
+    height: calc(100vh - 40px);
+    padding: 40px;
+    font-size: 0;
+    display: flex;
+}
+
+.userCont {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 .userProfile {
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 100px;
-}
-
-.userProfileImg {
-    width: 100px;
-    height: 100px;
-    background-color: white;
+    border: 1px solid #acacac;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
     border-radius: 100%;
-    border: 3px solid #8C6689;
-    display: inline-block;
 }
 
-.userProfileIntro {
-    width: 100%;
-    background-color: #8C6689;
+.userName {
+    font-size: 18px;
     margin-top: 10px;
-    padding: 5px;
-    color: white;
-    font-size: 14px;
 }
 
-.pageNav {
-    display: block;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    padding: 5px;
-    width: 96%;
-    margin:  10px auto;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.21);
-}
-
-.stClick {
-    background-color: rgba(0, 0, 0, 0.21);
-    border-right: 3px solid white;
-}
-
-.userButton {
-    font-size: 14px;
-    background-color: #8C6689;
-    display: inline-block;
-    width: 45%;
-    padding: 5px 10px;
-    color: white;
-    text-align: left;
-    margin: 80px 1.5% 0 0;
-}
-
-.userSet {
-    background-image: url(../images/option.png);
-    background-size: 21px;
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-}
-
-article {
-    width: calc(100% - 250px);
-    display: inline-flex;
-    padding: 3%;
+.userIntro {
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 .creation {
-    border: 1px solid white;
-    height: 440px;
-    background-color: rgba(255, 255, 255, 0.24);
-    flex: 1;
-    margin: 10px;
+    width: 200px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.creation a {
+    display: block;
+    width: 200px;
+    font-size: 15px;
+    color: black;
     transition: all .5s;
 }
 
-.creationImg {
-    height: 90%;
+.creation a:hover {
+    background-color: #e6e6e6;
 }
 
-.month {
-    background-image: url(../images/saturn.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
+.creation span {
+    display: inline-block;
+    border-right: 1.5px solid #d6d6d6;
+    font-size: 26px;
+    padding: 11px;
+    margin: 5px;
+    border-top-right-radius: 5px;
 }
 
-.week {
-    background-image: url(../images/moon.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.day {
-    background-image: url(../images/earth.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.creation:hover {
-    background-color: rgba(255, 255, 255, 0.57);
-}
-
-.creationBtn {
-    height: 10%;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.62);
+.contents {
+    width: calc(100% - 200px);
+    height: 100%;
+    margin-left: 40px;
+    background-color: white;
 }
