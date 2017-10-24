@@ -1,5 +1,0 @@
-{
-  "name": "WCE Planner", 
-  "start_url" : "./public/index.html",
-  "display": "standalone"
-}
