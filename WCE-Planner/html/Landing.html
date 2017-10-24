@@ -20,8 +20,129 @@
         -->
 
         <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        
+        <style media = "screen" type="text/css">
+            body{
+                width:100%;
+                height:100%;
+                margin:0 auto;
+                overflow-x:hidden;
+            }
+            
+            *{
+                margin:0;
+                padding:0;
+                border:0;
+                outline:none;
+                box-sizing:border-box;
+                font-family:'montserrat';
+            }
+            
+            header{
+                width:100%;
+                height:8rem;
+                /*border-bottom: 1px solid;*/
+            }
+            
+            header #landingLogo{
+                width:2.8rem;
+                margin-left:4.5rem;
+                margin-top:2.5rem;
+                display:inline-block;
+                vertical-align: top;
+            }
+            
+            header #logoText{
+                display: inline-block;
+                vertical-align: top;
+                color:#38DEDF;
+                font-size:1.75rem;
+                margin-top:2.75rem;
+                margin-left:0.4rem;
+                font-family: 'poiret one';
+                font-weight: bold;
+                letter-spacing: 1.5px;
+            }
+            
+            header nav{
+                position:absolute;
+                right:3rem;
+                top:2.8rem;
+            }
+            
+            header nav ul{
+                /**/
+            }
+            
+            header nav ul li{
+                display: inline-block;
+                font-size:1.15rem;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+                padding-right:1.5rem;
+            }
+            
+            header nav ul li a{
+                color:#111111;
+                text-decoration: none;
+                list-style: none;
+            }
+            
+/*
+            header nav ul li a:hover{
+                letter-spacing: 2px;
+            }
+*/
+            
+            header nav ul li#signupBtn{
+                height:2.9rem;
+                background-color:#111111;
+                border-radius: 3.5px;
+                padding-left:1.6rem;
+                padding-top:0.65rem;
+            }
+            
+            header nav ul li#signupBtn a{
+                color:white;
+            }
+            
+        </style>
     </head>
     <body>
-        
+        <header>
+            <img src = "../imgs/plannerLogo.png" alt = "landingLogo" id = "landingLogo">
+            <div id = "logoText">
+                planner
+            </div>
+            
+            <nav>
+                <ul>
+                    <li id = "teamList"><a href = "">Teams</a></li>
+                    <li id = "appList"><a href = "">Apps</a></li>
+                    <li id = "planList"><a href = "">Plans</a></li>
+                    <li id = "loginBtn"><a href = "">Log in</a></li>
+                    <li id = "signupBtn"><a href = "">Sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            
+        </section>
+        <footer>
+            
+        </footer>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
