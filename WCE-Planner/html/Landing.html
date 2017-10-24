@@ -20,7 +20,7 @@
         -->
 
         <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
         
         <style media = "screen" type="text/css">
@@ -88,6 +88,7 @@
                 color:#111111;
                 text-decoration: none;
                 list-style: none;
+                font-weight: 300;
             }
             
 /*
@@ -108,6 +109,45 @@
                 color:white;
             }
             
+            /* header 부분 완료 */
+            
+            section{
+                /**/
+            }
+            
+            section #sectionForm{
+                width:33rem;
+                height:15rem;
+                margin:0 auto;
+            }
+            
+            section #sectionForm h1{
+                font-size:2.9rem;
+                text-align: left;
+                line-height: 1.4;
+                margin-top:4rem;
+            }
+            
+            section #sectionForm h1 span{
+                color:#38DEDF;
+                font-style:italic;
+                font-family: 'poiret one';
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-size:3.5rem;
+            }
+            
+            section #sectionForm h2{
+                font-weight: 300;
+                font-size:1rem;
+                color:#606972;
+                margin-top:0.5rem;
+            }
+            
+            section #sectionForm h2 span{
+                padding-left:1.5rem;
+                font-weight: 600;
+            }
         </style>
     </head>
     <body>
@@ -127,9 +167,27 @@
                 </ul>
             </nav>
         </header>
+        
         <section>
-            
+            <div id = "sectionForm">
+                <h1>
+                    Make your plans stylish
+                    <br>
+                    with 
+                    <span>
+                        planner
+                    </span>
+                </h1>
+                <h2>
+                    Oct 24, 2017
+                    <span>
+                        #WCE-Planner
+                    </span>
+                </h2>
+            </div>
+            <img src = "../imgs/background.png" id = "backgroundImg" alt = "backgroundImg">
         </section>
+        
         <footer>
             
         </footer>
