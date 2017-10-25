@@ -153,10 +153,77 @@
                 margin-left:0.5rem;
             }
             
+            /**/
+            
             section aside #sideList{
                 width:100%;
                 height:calc(100vh - 17rem);
                 background-color:#33383e;
+            }
+            
+            section #sideList #searchInput{
+                background-color:transparent;
+                border:1.5px solid #444b50;
+                width:11rem;
+                height:2rem;
+                font-size:0.8rem;
+                color:white;
+                margin-left:1.35rem;
+                padding-left:10px;
+                margin-top:3rem;
+                border-radius: 4px;
+            }
+            
+            section #sideList #searchBtn{
+                width:2rem;
+                height:2rem;
+                background-color:#202427;
+                border-radius: 4px;
+                display: inline-block;
+                vertical-align: top;
+                margin-top:3rem;
+                margin-left:7px;
+                cursor: pointer;
+            }
+            
+            section #sideList #searchBtn img{
+                display: block;
+                margin: 0 auto;
+                width:16px;
+                margin-top:8px;
+            }
+            
+            section #sideList #sideTitle{
+                color:white;
+                font-size:0.85rem;
+                font-weight: 800;
+                margin-left:1.4rem;
+                margin-top:2rem;
+            }
+            
+            section #sideList ul{
+                margin-left:1.3rem;
+            }
+            
+            section #sideList ul li{
+                margin-top:1rem;
+            }
+            
+            section #sideList ul li:nth-of-type(1){
+                margin-top:1.75rem;
+            }
+            
+            section #sideList ul li a{
+                color:#777777;
+                font-size:0.85rem;
+                text-decoration: none;
+                font-weight: bold;
+                letter-spacing: 0.2px;
+                transition:0.2s;
+            }
+            
+            section #sideList ul li a:hover{
+                color:white;
             }
             
             /*-----------------------------------*/
@@ -190,13 +257,13 @@
         <section>
             <aside>
                 <div id = "mainList">
-                    <div class = "mainLists" id = "dashboard">
+                    <div class = "mainLists" id = "mainpage">
                         <img src = "../imgs/main/ic_home_white.png" alt = "toMainImg" id = "toMainImg">
                         <div class = "mainImgTexts">
                             메인페이지
                         </div>
                     </div>
-                    <div class = "mainLists" id = "teams">
+                    <div class = "mainLists" id = "mypage">
                         <img src = "../imgs/main/my.png" alt = "mypage" id = "mypageImg">
                         <div class = "mainImgTexts">
                             마이페이지
@@ -210,7 +277,21 @@
                     </div>
                 </div>
                 <div id = "sideList">
+                    <input type = "text" id = "searchInput" placeholder="글의 제목으로 검색">
+                    <div id = "searchBtn">
+                        <img src = "../imgs/main/magnifyImg.png" alt = "searchImg" id = "searchImg">
+                    </div>
                     
+                    <div id = "sideTitle">
+                        ABOUT PLANNER
+                    </div>
+                    <ul>
+                        <li><a href = "">공유하기</a></li>
+                        <li><a href = "">문의하기</a></li>
+                        <li><a href = "">회원탈퇴</a></li>
+                        <li><a href = "">완료된 계획 보기</a></li>
+                        <li><a href = "">미완료된 계획 보기</a></li>
+                    </ul>
                 </div>
             </aside>
             <div id = "mainPart">
