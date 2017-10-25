@@ -1,7 +1,7 @@
 로고 색 : #38DEDF
 랜딩 날짜 색 : #606972
 로그인 배경 색 : #111111
-랜딩 및 로고 폰트 : montserrat lighter ~ bold
+랜딩 및 로고 폰트 : montserrat lighter ~ bold 300*
 나머지 기본 폰트 : nanumsquare, montserrat
 메인 배경 색 : #f6f7fb
 메인 헤더 색 : #fdfdfe
