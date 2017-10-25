@@ -3,3 +3,10 @@
 로그인 배경 색 : #111111
 랜딩 및 로고 폰트 : montserrat lighter ~ bold
 나머지 기본 폰트 : nanumsquare
+메인 배경 색 : #f6f7fb
+메인 헤더 색 : #fdfdfe
+메인 aside 리스트 1 : #28dee1
+메인 aside 리스트 2 : #00d6d8
+메인 aside 리스트 3 : #01c8cb
+메인 mainPart 배경 색 : #33383e
+메인 로고 색 : #303030
