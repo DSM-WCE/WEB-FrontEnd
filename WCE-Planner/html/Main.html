@@ -34,8 +34,9 @@
             
             header #mainLogo{
                 width:2rem;
-                margin-left:3rem;
+                margin-left:4.2rem;
                 margin-top:1rem;
+                cursor:pointer;
             }
             
             header #logoText{
@@ -45,8 +46,50 @@
                 font-size:1.2rem;
                 letter-spacing: 0.5px;
                 vertical-align: top;
-                margin-top:1.3rem;
+                margin-top:1.2rem;
                 margin-left:0.2rem;
+                cursor:pointer;
+            }
+            
+            header #headerImgCover{
+                /*border: 1px solid;*/
+                width:20rem;
+                position: absolute;
+                right:3rem;
+                top:8px;
+                height:3rem;
+            }
+            
+            /* 임시 페이스북 프로필 */
+            header #headerImgCover #userImg{
+                width:36px;
+                height:36px;
+                border-radius: 100%;
+                background-image: url(../imgs/main/faceEx.jpg);
+                background-size:cover;
+                display: inline-block;
+                vertical-align: top;
+                margin-top:6px;
+                margin-left:5rem;
+            }
+            /**/
+            
+            header #headerImgCover img{
+                display:inline-block;
+                vertical-align: top;
+                margin-left:1.5rem;
+                margin-top:0.9rem;
+                cursor: pointer;
+            }
+            
+            header #headerImgCover img#arrowDownImg{
+                width:1.1rem;
+                margin-left:8px;
+                margin-top:1rem;
+            }
+            
+            header #headerImgCover img#settingImg{
+                margin-left:5rem;
             }
             
             /* header 완료 */
@@ -104,9 +147,19 @@
     </head>
     <body>
         <header>
-            <img src = "../imgs/plannerLogo2.png" alt = "mainLogo" id = "mainLogo">
+            <img src = "../imgs/main/plannerLogo2.png" alt = "mainLogo" id = "mainLogo">
             <div id = "logoText">
                 planner
+            </div>
+            
+            <div id = "headerImgCover">
+                <!-- 임시 페이스북 프로필 -->
+                <div id = "userImg"></div>
+                <img src = "../imgs/main/arrowDown.png" alt = "arrowDown" id = "arrowDownImg">
+                <!-- -->
+                
+                <img src = "../imgs/main/ic_setting.png" alt = "setting" id = "settingImg">
+                <img src = "../imgs/main/ic_log_out_gray.png" alt = "logout" id = "logoutImg">
             </div>
         </header>
         
