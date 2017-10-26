@@ -294,7 +294,7 @@
                 width:10rem;
                 height:20px;
                 float:right;
-                margin-right:5rem;
+                margin-right:0.9rem;
             }
             
             section #mainCheckForm #mainCheck{
@@ -321,10 +321,92 @@
                 font-family: 'montserrat';
                 margin-left:5px;
                 color:#707070;
-                font-weight:bold;
+                font-weight:600;
                 letter-spacing: 0.5px;
                 margin-top:2px;
                 cursor: pointer;
+            }
+            
+            /* 제일 중요한 플랜 파트 */
+            
+            section .planCovers{
+                /* 완성만 하자.. */
+                /*border:1px solid darkgray;*/
+                min-width:75rem;
+                width:75rem;
+                margin:0 auto;
+                height:17.5rem;
+                margin-top:6rem;
+            }
+            
+            section .planDates{
+                height:2rem;
+                /*border-bottom:1px solid darkgray;*/
+                font-size:0.9rem;
+                font-weight: bold;
+                color:#606060;
+                padding-top:8px;
+                padding-left:2.7rem;
+            }
+            
+            section .plans{
+                height:15.5rem;
+                text-align: center;
+            }
+            
+            section .plans .realPlans{
+                /*border:1px solid darkgray;*/
+                width:15rem;
+                height:15rem;
+                display: inline-block;
+                margin-right:3rem;
+                margin-top:5px;
+                vertical-align: top;
+                text-align: center;
+                border-radius: 2px;
+            }
+            
+            /* 색 예시 */
+            section .plans .realPlans:nth-of-type(1){
+                margin-left:2rem;
+                background-color:#fedb3f;
+            }
+            
+            section .plans .realPlans:nth-of-type(2){
+                background-color:#ff5d43;
+            }
+            
+            section .plans .realPlans:nth-of-type(3){
+                background-color:#457ff5;
+            }
+            
+            section .plans .realPlans:nth-of-type(4){
+                background-color:#33deb1;
+            }
+            /*-------*/
+            
+            section .realPlans .planTitles{
+                font-size:1.1rem;
+                color:white;
+                font-weight: bold;
+                padding-top:6.5rem;
+            }
+            
+            section .realPlans .planBtns{
+                width:28px;
+                height:28px;
+                display:inline-block;
+                background-color:white;
+                border-radius: 100%;
+                margin:4px;
+                margin-top:4.5rem;
+                vertical-align: top;
+                cursor:pointer;
+            }
+            
+            section .planBtns img{
+                width:18px;
+                margin-top:5px;
             }
         </style>
     </head>
@@ -406,8 +488,151 @@
                             ABOUT?
                         </div>
                     </div>
-                    
                 </div>
+                
+                <!-- 제일 중요한 메인 파트 -->
+                <div class = "planCovers" style = "margin-top:2rem";>
+                    <div class = "planDates"></div>
+                    <div class = "plans">
+                        <!-- 4개가 최대가 되도록 -->
+                        <div class = "realPlans">
+                            <div class = "planTitles">
+                                12시에 장 보러 가기!!!
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                        <div class = "realPlans">
+                            <div class = "planTitles">
+                                8:30분에 여친이랑 데이트
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                        <div class = "realPlans">
+                            <div class = "planTitles">
+                                오늘의 중요한 계획들
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                        <div class = "realPlans">
+                            <div class = "planTitles">
+                                학원 시간 변경됨
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------->
+                <div class = "planCovers">
+                    <div class = "planDates"></div>
+                    <div class = "plans">
+                        <!-- 4개가 최대가 되도록 -->
+                        <div class = "realPlans" style = "background:#2c296c;">
+                            <div class = "planTitles">
+                                남한산성 영화 보기
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                        <div class = "realPlans" style = "background:#667696;">
+                            <div class = "planTitles">
+                                그냥 뻘짓 적어보기
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                        <div class = "realPlans" style = "background:#eee2ba">
+                            <div class = "planTitles">
+                                학습지 3장 풀기
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                        <div class = "realPlans" style = "background:#bed2eb">
+                            <div class = "planTitles">
+                                내일 학교 숙제랑 준비물
+                            </div>
+                            
+                            <!-- 이미지 3개 버튼들 -->
+                            <div class = "planBtns" id = "planLike">
+                                <img src = "../imgs/main/blackHeart.png" alt = "planLike" id = "planLikeImg">
+                            </div>
+                            <div class = "planBtns" id = "planCheck">
+                                <img src = "../imgs/main/planCheck.png" alt = "planCheck" id = "planCheckImg">
+                            </div>
+                            <div class = "planBtns" id = "planSee">
+                                <img src = "../imgs/main/moreOption.png" alt = "seemore" id = "planSeeImg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 여기까지 -->
             </div>
         </section>
         <footer>
@@ -438,6 +663,15 @@
                     lockText.innerHTML = "Opened Planner";
                 } 
             });
+            
+            let date = new Date();
+            let planDates = document.getElementsByClassName('planDates');
+            
+            for(let idx = 0; idx < planDates.length; idx++){
+                planDates[idx].innerHTML 
+                = date.getFullYear() + "-" + (date.getMonth()+1) + "-"
+                + date.getDate();
+            }
         </script>
     </body>
 </html>
