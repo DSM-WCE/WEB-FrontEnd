@@ -262,6 +262,70 @@
                 vertical-align: top;
                 overflow-y: auto;
             }
+            
+            section #mainPart #mainImgCover{
+                /*border:1px solid;*/
+                height:2rem;
+                margin-top:3.5rem;
+            }
+            
+            section #mainImgCover img{
+                width:20px;
+                margin-right:1rem;
+                cursor:pointer;
+            }
+            
+            section #mainImgCover img:nth-of-type(1){
+                margin-left:5rem;
+            }
+            
+            section #mainImgCover #lockText{
+                font-size:0.8rem;
+                display:inline-block;
+                vertical-align: top;
+                color:#555555;
+                font-family: 'montserrat';
+                margin-top:3px;
+                margin-left:-8px;
+            }
+            
+            section #mainImgCover #mainCheckForm{
+                /*border:1px solid;*/
+                width:10rem;
+                height:20px;
+                float:right;
+                margin-right:5rem;
+            }
+            
+            section #mainCheckForm #mainCheck{
+                width:20px;
+                height:20px;
+                background-color:#38DEDF;
+                border-radius: 100%;
+                cursor:pointer;
+                text-align: center;
+                display: inline-block;
+            }
+            
+            section #mainCheck #smallCheckImg{
+                width:12px;
+                margin:0 auto;
+                position:relative;
+                top:5px;
+            }
+            
+            section #mainCheckForm #mainText{
+                font-size:0.8rem;
+                display: inline-block;
+                vertical-align: top;
+                font-family: 'montserrat';
+                margin-left:5px;
+                color:#707070;
+                font-weight:bold;
+                letter-spacing: 0.5px;
+                margin-top:2px;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
@@ -322,46 +386,58 @@
                     </ul>
                 </div>
             </aside>
-            <div id = "mainPart" style = "font-size:2rem">
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
-                test<br>
+            <div id = "mainPart">
+                <div id = "mainImgCover">
+                    <img src = "../imgs/main/list.png" id = "listImg" alt = "listImg">
+                    <img src = "../imgs/main/heart.png" id = "heartImg" alt = "heartImg">
+                    
+                    <!----------------------->
+                    <img src = "../imgs/main/lock.png" id = "lockImg" alt = "lockedImg">
+                    <div id = "lockText">
+                        Opened Planner
+                    </div>
+                    <!----------------------->
+                    
+                    <div id = "mainCheckForm">
+                        <div id = "mainCheck">
+                            <img src = "../imgs/main/smallCheck.png" alt = "smallCheck" id = "smallCheckImg">
+                        </div>
+                        <div id = "mainText">
+                            ABOUT?
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </section>
         <footer>
             <!-- -->
         </footer>
+        
+        <script type = "text/javascript">
+            //그냥 테스트
+            let heart = document.getElementById('heartImg');
+            let lock = document.getElementById('lockImg');
+            
+            heart.addEventListener('click', () => {
+                if(heart.getAttribute('src') == '../imgs/main/heart.png'){
+                    heart.setAttribute('src','../imgs/main/heart2.png')
+                }else{
+                    heart.setAttribute('src', '../imgs/main/heart.png');
+                }
+            });
+            
+            lock.addEventListener('click', () => {
+                let lockText = document.getElementById('lockText');
+                
+                if(lock.getAttribute('src') == "../imgs/main/lock.png"){
+                    lock.setAttribute('src', "../imgs/main/lock2.png");
+                    lockText.innerHTML = "Locked Planner";
+                }else{
+                    lock.setAttribute('src', "../imgs/main/lock.png");
+                    lockText.innerHTML = "Opened Planner";
+                } 
+            });
+        </script>
     </body>
 </html>
