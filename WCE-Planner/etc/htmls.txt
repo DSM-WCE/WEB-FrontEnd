@@ -1,0 +1,3 @@
+input type file에서 특정 속성만 받기
+이미지: accept = "image/*"
+동영상: accept = "video/*"
