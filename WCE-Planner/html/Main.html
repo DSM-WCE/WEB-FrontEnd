@@ -17,7 +17,6 @@
                 height:100%;
                 margin:0 auto;
                 background-color:#f6f7fb;
-                
                 overflow:hidden;
             }
             
@@ -437,7 +436,7 @@
                 position: absolute;
                 z-index: 8888;
                 background-color:rgba(0,0,0,0.75);
-                /*display:none;*/
+                display:none;
             }
             
             /* 회원 탈퇴 */
@@ -536,7 +535,123 @@
                 left:50%;
                 transform: translate(-50%, -50%);
                 z-index: 9999;
+                display:none;
             }
+            
+            #inquiryForm label{
+                color:#727272;
+                font-size:1rem;
+                font-weight: bold;
+                margin-left:1rem;
+                display:inline-block;
+                margin-top:2rem;
+            }
+            
+            #inquiryForm #inquiryTitle{
+                display:block;
+                border:1px solid #c9c9c9;
+                width:96%;
+                height:1.85rem;
+                margin-left:1rem;
+                margin-top:0.75rem;
+                padding-left:0.5rem;
+            }
+            
+            #inquiryForm #inquiryBtnCover{
+                text-align: center;
+            }
+            
+            #inquiryBtnCover .inquiryBtns{
+                border:1px solid #c9c9c9;
+                width:14.5rem;
+                height:1.8rem;
+                display: inline-block;
+                vertical-align: top;
+                margin:1rem;
+                cursor: pointer;
+                
+                color:#505050;
+                font-size:0.85rem;
+                padding-top:7px;
+            }
+            
+            #inquiryBtnCover .inquiryBtns:hover{
+                background-color:#38DEDF;
+                color:white;
+                border:0;
+            }
+            
+            .inquiryBtns input{
+                display:none;
+            }
+            
+            #inquiryForm #inquiryOkayBtn{
+                width:7.5rem;
+                height:2.2rem;
+                background-color:#38DEDF;
+                display:table;
+                float:right;
+                margin-right:1rem;
+                margin-top:0.5rem;
+                cursor:pointer;
+            }
+            
+            #inquiryOkayBtn #inquiryOkayText{
+                color:white;
+                font-size:0.9rem;
+                font-weight: 800;
+                text-align: center;
+                display:table-cell;
+                vertical-align: middle;
+                letter-spacing: 0.5px;
+            }
+            
+            
+            /* tinymce css 수정 */
+            #mceu_11{
+                width:47.8rem !important;
+                margin-left:1rem;
+                margin-top:0.5rem;
+                height:17.5rem !important;
+            }
+            
+            #mceu_11 *{
+                background-color:white;
+            }
+            
+            #mceu_12-body{
+                display:none;
+            }
+            
+            #mce_0_ifr{
+                height:13.5rem !important;
+            }
+            
+            #mceu_27{
+                display:none;
+            }
+            
+            #mceu_28{
+                display:none;
+            }
+            
+            #mceu_29{
+                display:none;
+            }
+            
+            .mce-branding-powered-by{
+                display:none;
+            }
+            
+            .mce-ico mce-i-resize{
+                display:none !important;
+            }
+            
+            .mce-btn button{
+                padding:2px 7px !important;
+            }
+            /**/
+            
         </style>
     </head>
     <body>
@@ -567,6 +682,35 @@
             <div class = "modalFormHeaders" id = "inquiryHeader">
                 <h1>문의하기</h1>
                 <img src = "../imgs/main/exit.png" class = "exitImg" alt = "exitImg">
+            </div>
+            
+            <label>문의사항</label>
+            <input type = "text" id = "inquiryTitle" placeholder="제목을 입력해주세요.">
+            
+            <label>버그 내용</label>
+            <textarea>
+                <!-- tinymce textarea -->
+            </textarea>
+            
+            <div id = "inquiryBtnCover">
+                <label class = "inquiryBtns" for = "imgUpload">
+                    이미지 첨부
+                    <input type = "file" accept="image/*" id = "imgUpload">
+                </label>
+                <label class = "inquiryBtns">
+                    동영상 첨부
+                    <input type = "file" accept="video/*" id = "videoUpload">
+                </label>
+                <label class = "inquiryBtns">
+                    파일 첨부
+                    <input type = "file" id = "fileUpload">
+                </label>
+            </div>
+            
+            <div id = "inquiryOkayBtn">
+                <div id = "inquiryOkayText">
+                    접수하기
+                </div>
             </div>
         </div>
         
