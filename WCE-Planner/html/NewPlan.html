@@ -21,6 +21,7 @@
                 border:0;
                 outline:none;
                 box-sizing: border-box;
+                font-family: 'nanumsquare', sans-serif;
             }
             
             header{
@@ -28,6 +29,56 @@
                 height:4rem;
                 background-color:#0e1114;
             }
+            
+            header img{
+                display:inline-block;
+                vertical-align: middle;
+                margin-left:1.5rem;
+                cursor:pointer;
+            }
+            
+            header #planInfo{
+                display:inline-block;
+                /*background:red;*/
+                width:15rem;
+                height:100%;
+                margin-left:1.5rem;
+                margin-top:0.4rem;
+                vertical-align: top;
+            }
+            
+            #planInfo *{
+                font-family: 'poiret one';
+                letter-spacing: 0.5px;
+            }
+            
+            #planInfo h1{
+                color:#909090;
+                font-size:1.3rem;
+                line-height:1;
+                padding-top:0.7rem;
+                cursor:pointer;
+            }
+    
+            header #planImgsCover{
+                width:15rem;
+                /*border:1px solid white;*/
+                height:100%;
+                display:inline-block;
+                float:right;
+            }
+            
+            #planImgsCover img{
+                width:20px;
+                padding-top:1.35rem;
+                margin-right:0.5rem;
+            }
+            
+            #planImgsCover img:nth-of-type(1){
+                margin-left:3rem;
+            }
+            
+            /* section 시작 */
             
             section{
                 width:100%;
@@ -48,13 +99,22 @@
             section aside{
                 width:25rem;
                 height:100%;
-                background-color:#1e2427;
             }
         </style>
     </head>
     <body>
         <header>
-                
+            <div id = "planInfo">
+                <h1>
+                    <img src = "../imgs/plan/planLogo.png" alt = "logo" id = "logo">
+                    planner
+                </h1>
+            </div>
+            <div id = "planImgsCover">
+                <img src = "../imgs/plan/info.png" alt = "infoImg" id = "infoImg">
+                <img src = "../imgs/plan/leftArrow.png" alt = "leftArrow" id = "leftArrow">
+                <img src = "../imgs/plan/rightArrow.png" alt = "rightArrow" id = "rightArrow">
+            </div>
         </header>
         
         <section>
