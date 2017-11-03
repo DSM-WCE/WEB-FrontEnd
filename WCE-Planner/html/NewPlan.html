@@ -96,9 +96,153 @@
                 height:100%;
             }
             
+            section article img{
+                display:block;
+                width:100%;
+                height:100%;
+                background-size:cover;
+            }
+            
+            article #blackCover{
+                position:absolute;
+                height:calc(100% - 4rem);
+                width:calc(100% - 25rem);
+                z-index:9999;
+                background-color:rgba(0,0,0,0.7);
+                top:4rem;
+            }
+            
+            /*---------------------------------*/
+            
             section aside{
                 width:25rem;
                 height:100%;
+                background-color:#1e2427;
+            }
+            
+            aside #asideHeader{
+                width:100%;
+                height:12rem;
+                background-color:#31383c;
+                
+            }
+            
+            #asideHeader #addDescription{
+                font-size:0.85rem;
+                color:#c6c6c6;
+                margin-top:3rem;
+                display:inline-block;
+                position: relative;
+                padding-left:2.5rem;
+            }
+            
+            #asideHeader #editImg{
+                margin-top:2.9rem;
+                margin-left:0.5rem;
+                display:inline-block;
+                width:16px;
+            }
+            
+            #asideHeader img{
+                width:20px;
+                cursor:pointer;
+            }
+            
+            #asideHeader #descriptionCover{
+                text-align: center;
+                display:block;
+            }
+            
+            #asideHeader .descriptionBtns{
+                border:1px solid #c6c6c6;
+                width:10rem;
+                height:2.8rem;
+                display:inline-block;
+                vertical-align: top;
+                margin:0.2rem;
+                margin-top:2rem;
+                transition:0.25s;
+                cursor: pointer;
+            }
+            
+            #asideHeader .descriptionBtns:hover{
+                background-color:#4b5358;
+            }
+            
+            #asideHeader .descriptionBtns img{
+                padding-top:0.7rem;
+            }
+            
+            /**/
+            
+            aside label{
+                font-size:0.9rem;
+                display:block;
+                color:white;
+                margin-left:2rem;
+                margin-top:2rem;
+            }
+            
+            aside input{
+                border-bottom:1px solid white;
+                display:block;
+                background-color:transparent;
+                width:84%;
+                height:2.25rem;
+                margin:0 auto;
+                margin-top:0.5rem;
+                color:white;
+            }
+            
+            aside #desInputCover{
+                width:84%;
+                background-color:white;
+                height:15rem;
+                border-radius: 4px;
+                margin:0 auto;
+                display:block;
+                margin-top:0.8rem;
+            }
+            
+            #desInputCover textarea{
+                width:100%;
+                border-bottom:1px solid #c6c6c6;
+                font-size:0.9rem;
+                height:75%;
+                border-radius: 4px 4px 0 0;
+                padding-top:0.5rem;
+                padding-left:0.5rem;
+                letter-spacing: 0.5px;
+            }
+            
+            #desInputCover #postBtn{
+                width:6rem;
+                height:2.3rem;
+                background-color:#38DEDF;
+                border-radius: 3px;
+                display:table;
+                float:right;
+                margin-right:1rem;
+                margin-top:0.8rem;
+            }
+            
+            #postBtn #postBtnText{
+                font-size:1rem;
+                color:white;
+                font-weight: bold;
+                text-align: center;
+                display:table-cell;
+                vertical-align: middle;
+                letter-spacing: 0.2px;
+            }
+            
+            /**/
+            
+            label #backPicImg{
+                cursor: pointer;
+                width:1.5rem;
+                margin-left:0.5rem;
+                margin-top:-0.25rem;
             }
         </style>
     </head>
@@ -122,8 +266,107 @@
                 
             </article>
             <aside>
+                <div id = "asideHeader">
+                    <div id = "addDescription" contenteditable="false">
+                        설명을 추가해보세요.
+                    </div>
+                    <img src = "../imgs/plan/edit.png" alt = "editImg" id = "editImg">
+                    
+                    <div id = "descriptionCover">
+                        <div class = "descriptionBtns" alt = "love" id = "lovePlanImg">
+                            <img src = "../imgs/plan/heart.png" alt = "heart" id = "heartImg">
+                        </div>
+                        <div class = "descriptionBtns" alt = "love" id = "delPlanImg">
+                            <img src = "../imgs/plan/delete.png" alt = "delete" id = "deleteImg">
+                        </div>
+                    </div>
+                </div>
                 
+                <label for = "titleInput">제목</label>
+                <input type = "text" placeholder="제목을 입력해주세요." id = "titleInput">
+                
+                <label for = "descriptionInput">설명</label>
+                <div id = "desInputCover">
+                    <textarea id = "descriptionInput" placeholder="설명을 입력해주세요.">
+                        
+                    </textarea>
+                    <div id = "postBtn">
+                        <div id = "postBtnText">
+                            POST
+                        </div>
+                    </div>
+                </div>
+                
+                <label style = "display:inline-block;" for = "backPic">배경 사진 등록:
+                    <img src = "../imgs/plan/backPic.png" alt = "backPic" id = "backPicImg">
+                    <input type = "file" style = "display:none"; id = "backPic" accept="image/*">
+                </label>
+                
+                <!--<label for = "backColor"></label>-->
             </aside>
         </section>
+        
+        <script type = "text/javascript">
+            //test
+            let test = document.getElementsByClassName('descriptionBtns')[0];
+            let heart = document.getElementById('heartImg');
+            let edit = document.getElementById('editImg');
+            
+            test.onmouseover = (e) => {
+                heart.setAttribute('src', "../imgs/plan/heart2.png");
+            }
+            
+            test.onmouseout = (e) => {
+                heart.setAttribute('src', "../imgs/plan/heart.png");
+            }
+            
+            edit.onclick = () => {
+                let des = document.getElementById('addDescription');
+                
+                des.setAttribute('contenteditable', true);
+                des.style.textDecoration = "underline";
+                
+                des.onkeydown = (e) => {
+                    if(e.target.innerText.length >= 18){
+                        e.target.innerText = e.target.innerText.substring(0, 17);
+                    }
+                    
+                    if(e.keyCode == "13"){
+                        des.setAttribute('contenteditable', false);
+                        des.style.textDecoration = defaultStatus;
+                    }
+                }
+            }
+            
+            /* 사진 바꾸기 */
+            let uploadImg = document.getElementById('backPic');
+            let createDiv = document.createElement('div');
+            createDiv.setAttribute('id', 'blackCover');
+            
+            uploadImg.onchange = function (e) {
+                e.preventDefault();
+                let appendImg = document.querySelector('article');//willChange
+                
+                let file = uploadImg.files[0],
+                    reader = new FileReader();
+                
+                reader.onload = function (event){
+                    let img = new Image();
+                    img.src = event.target.result;
+                    
+//                    //이미지 크기
+//                    if(img.width > 175){
+//                        console.log("overflow!");
+//                        img.width = 175;
+//                    }
+                    
+                    appendImg.innerHTML = '';
+                    appendImg.appendChild(img);
+                    appendImg.appendChild(createDiv);
+                };
+                reader.readAsDataURL(file);
+                return false;
+            };
+        </script>
     </body>
 </html>
