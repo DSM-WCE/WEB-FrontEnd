@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>planner 관리자 페이지</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <style>
+        
+        body{
+            width:100%;
+            height:100%;
+            margin:0 auto;
+            background-color:#f6f7fb;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            border:0;
+            outline:none;
+            box-sizing: border-box;
+            font-family: 'nanumsquare', sans-serif;
+        }
+        
+        *::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+
+        *::-webkit-scrollbar
+        {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
+
+        *::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+            background-color: #555;
+        }
+        
+        header{
+            width:100%;
+            height:4rem;
+            background-color:white;
+            box-shadow: 0 0 3px darkgray;
+            position: fixed;
+        }
+
+        header #mainLogo{
+            width:2rem;
+            margin-left:4.2rem;
+            margin-top:1rem;
+            cursor:pointer;
+        }
+
+        header #logoText{
+            font-family: 'poiret one';
+            font-weight: bold;
+            display: inline-block;
+            font-size:1.2rem;
+            letter-spacing: 0.5px;
+            vertical-align: top;
+            margin-top:1.2rem;
+            margin-left:0.2rem;
+            cursor:pointer;
+        }
+
+        header #headerImgCover{
+            /*border: 1px solid;*/
+            width:20rem;
+            position: absolute;
+            right:3rem;
+            top:8px;
+            height:3rem;
+        }
+
+        /* 임시 페이스북 프로필 */
+        header #headerImgCover #userImg{
+            width:36px;
+            height:36px;
+            border-radius: 100%;
+            background-image: url(../imgs/main/faceEx.jpg);
+            background-size:cover;
+            display: inline-block;
+            vertical-align: top;
+            margin-top:5.5px;
+            margin-left:5rem;
+        }
+        /**/
+
+        header #headerImgCover img{
+            display:inline-block;
+            vertical-align: top;
+            margin-left:1.5rem;
+            margin-top:0.9rem;
+            cursor: pointer;
+        }
+
+        header #headerImgCover img#arrowDownImg{
+            width:1.1rem;
+            margin-left:8px;
+            margin-top:1rem;
+        }
+
+        header #headerImgCover img#settingImg{
+            margin-left:5rem;
+        }
+
+        /* header 완료 */
+        
+        section {
+            width: 100%;
+        }
+        
+        section .inquiryContainer {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 6rem 1rem;
+        }
+        
+        section .inquiryList {
+            background-color: white;
+            box-shadow: 0 0 3px darkgray;
+            width: 100%;
+            padding: 1rem;
+            transition: background-color 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        section .inquiryList:hover {
+            background-color: #ebebeb;
+        }
+        
+        section .inquiryTitle {
+            font-size: 1.3rem;
+            width: auto;
+        }
+        
+        section .inquiryUsername {
+            display: inline-block;
+            border-right: 1px solid #cccccc;
+            padding-right: 20px;
+            margin-right: 15px;
+            font-size: 0.8rem;
+        }
+        
+        section .inquiryID {
+            display: inline;
+            font-size: 0.8rem;
+        }
+        
+        section .inquiryDate {
+            display: inline;
+            font-size: 0.8rem;
+        }
+        
+        section #deleteInquiry {
+            float: right;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: filter .2s;
+        }
+        
+        section #deleteInquiry:hover {
+            filter: brightness(50%);
+        }
+        /* section */
+    </style>
+</head>
+<body>
+    <header>
+        <img src = "../imgs/main/plannerLogo2.png" alt = "mainLogo" id = "mainLogo">
+        <div id = "logoText">
+            planner
+        </div>
+
+        <div id = "headerImgCover">
+            <!-- 임시 페이스북 프로필 -->
+            <div id = "userImg"></div>
+            <img src = "../imgs/main/arrowDown.png" alt = "arrowDown" id = "arrowDownImg">
+            <!-- -->
+
+            <img src = "../imgs/main/ic_setting.png" alt = "setting" id = "settingImg">
+            <img src = "../imgs/main/ic_log_out_gray.png" alt = "logout" id = "logoutImg">
+        </div>
+    </header>
+    <section>
+        <div class="inquiryContainer">
+            <div class="inquiryList">
+               <img src = "../imgs/plan/delete.png" id = "deleteInquiry">
+                <h3 class="inquiryTitle">문의 제목</h3>
+                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
+                <div class="inquiryDate">작성 날짜</div>
+            </div>
+            <div class="inquiryList">
+               <img src = "../imgs/plan/delete.png" id = "deleteInquiry">
+                <h3 class="inquiryTitle">문의 제목</h3>
+                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
+                <div class="inquiryDate">작성 날짜</div>
+            </div>
+            <div class="inquiryList">
+               <img src = "../imgs/plan/delete.png" id = "deleteInquiry">
+                <h3 class="inquiryTitle">문의 제목</h3>
+                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
+                <div class="inquiryDate">작성 날짜</div>
+            </div>
+            <div class="inquiryList">
+               <img src = "../imgs/plan/delete.png" id = "deleteInquiry">
+                <h3 class="inquiryTitle">문의 제목</h3>
+                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
+                <div class="inquiryDate">작성 날짜</div>
+            </div>
+            <div class="inquiryList">
+               <img src = "../imgs/plan/delete.png" id = "deleteInquiry">
+                <h3 class="inquiryTitle">문의 제목</h3>
+                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
+                <div class="inquiryDate">작성 날짜</div>
+            </div>
+            <div class="inquiryList">
+               <img src = "../imgs/plan/delete.png" id = "deleteInquiry">
+                <h3 class="inquiryTitle">문의 제목</h3>
+                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
+                <div class="inquiryDate">작성 날짜</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
