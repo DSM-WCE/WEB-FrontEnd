@@ -2,12 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>planner 관리자 페이지</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <title>planner 문의 글</title>
     <style>
-        
         body{
             width:100%;
             height:100%;
@@ -111,38 +107,33 @@
         header #headerImgCover img#settingImg{
             margin-left:5rem;
         }
-
+        
         /* header 완료 */
         
         section {
-            width: 100%;
-        }
-        
-        section .inquiryContainer {
-            max-width: 80rem;
-            margin: 0 auto;
             padding: 6rem 1rem;
         }
-        
-        section .inquiryList {
+        .container {
+            margin: auto;
+            max-width: 60rem;
+            padding: 1rem;
             background-color: white;
             box-shadow: 0 0 3px darkgray;
-            width: 100%;
-            padding: 1rem;
-            transition: background-color 0.3s;
+        }
+        
+        #inquiryTitle {
+            font-size: 1.4rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #cecece;
             margin-bottom: 1rem;
         }
         
-        section .inquiryList:hover {
-            background-color: #ebebeb;
+        .userContainer {
+            padding-bottom: 1rem;
+            width: 100%;
         }
         
-        section .inquiryTitle {
-            font-size: 1.3rem;
-            width: auto;
-        }
-        
-        section .inquiryUsername {
+        .inquiryUsername {
             display: inline-block;
             border-right: 1px solid #cccccc;
             padding-right: 20px;
@@ -150,27 +141,26 @@
             font-size: 0.8rem;
         }
         
-        section .inquiryID {
+        .inquiryID {
             display: inline;
             font-size: 0.8rem;
         }
         
-        section .inquiryDate {
+        .inquiryDate {
             display: inline;
             font-size: 0.8rem;
         }
         
-        section .deleteInquiry {
+        .deleteInquiry {
             float: right;
             cursor: pointer;
             margin-top: 0.5rem;
             transition: filter .2s;
         }
         
-        section .deleteInquiry:hover {
+        .deleteInquiry:hover {
             filter: brightness(50%);
         }
-        /* section */
     </style>
 </head>
 <body>
@@ -191,43 +181,16 @@
         </div>
     </header>
     <section>
-        <div class="inquiryContainer">
-            <div class="inquiryList">
-               <img src = "../imgs/plan/delete.png" class = "deleteInquiry">
-                <h3 class="inquiryTitle">문의 제목</h3>
+        <div class="container">
+            <div class="userContainer">
                 <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
                 <div class="inquiryDate">작성 날짜</div>
+                <img src = "../imgs/plan/delete.png" class = "deleteInquiry">
             </div>
-            <div class="inquiryList">
-               <img src = "../imgs/plan/delete.png" class = "deleteInquiry">
-                <h3 class="inquiryTitle">문의 제목</h3>
-                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
-                <div class="inquiryDate">작성 날짜</div>
-            </div>
-            <div class="inquiryList">
-               <img src = "../imgs/plan/delete.png" class = "deleteInquiry">
-                <h3 class="inquiryTitle">문의 제목</h3>
-                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
-                <div class="inquiryDate">작성 날짜</div>
-            </div>
-            <div class="inquiryList">
-               <img src = "../imgs/plan/delete.png" class = "deleteInquiry">
-                <h3 class="inquiryTitle">문의 제목</h3>
-                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
-                <div class="inquiryDate">작성 날짜</div>
-            </div>
-            <div class="inquiryList">
-               <img src = "../imgs/plan/delete.png" class = "deleteInquiry">
-                <h3 class="inquiryTitle">문의 제목</h3>
-                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
-                <div class="inquiryDate">작성 날짜</div>
-            </div>
-            <div class="inquiryList">
-               <img src = "../imgs/plan/delete.png" class = "deleteInquiry">
-                <h3 class="inquiryTitle">문의 제목</h3>
-                <div class="inquiryUsername">사용자 닉네임(<div class="inquiryID">사용자 아이디</div>)</div>
-                <div class="inquiryDate">작성 날짜</div>
-            </div>
+            <h1 id="inquiryTitle">문의 제목</h1>
+            <p class="inquiryContents">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita temporibus modi voluptatibus consequuntur labore, magni incidunt repellendus dicta ratione possimus quia, iusto sequi. Voluptatum officiis fuga, voluptas recusandae soluta nihil. ipsum dolor sit amet, consectetur adipisicing elit. Iure quas doloribus illum ea, blanditiis cupiditate rerum at labore culpa amet. Corporis nam soluta dolores voluptates, eum nobis aperiam cupiditate distinctio? ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sint ducimus, ea rem, atque, minima odio quod rerum nam laboriosam deserunt alias odit? Maiores tempora magni, animi? Sint, asperiores, quibusdam.
+            </p>
         </div>
     </section>
 </body>
