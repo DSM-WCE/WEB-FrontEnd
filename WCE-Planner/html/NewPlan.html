@@ -301,6 +301,7 @@
                 margin-top:3rem;
                 box-shadow: 0 0 7.5px darkgray inset;
                 padding:5px;
+                word-break: break-all;
             }
             
             .postBoxes img{
@@ -311,8 +312,8 @@
                 vertical-align: top;
                 float:right;
                 position:relative;
-                left:6.25rem;
-                margin-left:2rem;
+                left:8.5rem;
+                margin-left:1.5rem;
                 cursor: pointer;
             }
             
@@ -462,12 +463,28 @@
                 editImg.setAttribute('src', '../imgs/plan/editImg.png');
                 let delImg = document.createElement('img'); //삭제 이미지
                 delImg.setAttribute('src', '../imgs/plan/garbage.png');
+                let checkImg = document.createElement('img');
+                checkImg.setAttribute('src', '../imgs/plan/postCheck.png');
+                checkImg.style.display = "none";
                 
                 blackCover.appendChild(postBox); //박스 추가
                 postBox.appendChild(postBoxText); // 박스 내 텍스트 추가
-                postBox.appendChild(editImg);
+                //이미지들 추가
+                postBox.appendChild(checkImg);
                 postBox.appendChild(delImg);
+                postBox.appendChild(editImg);
                 
+                //edit누르면 수정
+                editImg.onclick = (e) => {
+                    postBoxText.setAttribute('contentEditable', true);
+                    postBoxText.style.textDecoration = "underline";
+                    checkImg.style.display = "inline-block";
+                    
+                    checkImg.onclick = () => {
+                        postBoxText.setAttribute('contentEditable', false);
+                        postBoxText.style.textDecoration = defaultStatus;
+                    }
+                }
             }
         </script>
     </body>
